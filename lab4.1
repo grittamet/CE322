@@ -3,7 +3,7 @@ public class Grading
     public static void main(String[] args)
     {
         Grade Mr_A = new Grade();
-        Mr_A.calGrade(70);
+        Mr_A.calGrade(88);
     }
 }
 
@@ -13,11 +13,15 @@ class Grade{
         grade = 'R';
     }
     public void calGrade(int score) {
-        if (score >= 90 && score <=100)
+        if (score >= 80 && score <=100)
             grade = 'A';
-        else if (score >= 80 && score <=89)
+        else if (score >= 70 && score <=79)
             grade = 'B';
-        else grade = 'N';
+        else if (score >= 60 && score <=69)
+            grade = 'C';
+        else if (score >= 50 && score <=59)
+            grade = 'D';
+        else grade = 'F';
         System.out.println("Grade = " + grade);
     }
 } 
