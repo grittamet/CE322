@@ -1,0 +1,23 @@
+public class Grading
+{
+    public static void main(String[] args)
+    {
+        Grade Mr_A = new Grade();
+        Mr_A.calGrade(70);
+    }
+}
+
+class Grade{
+    private char grade;
+    Grade(){
+        grade = 'R';
+    }
+    public void calGrade(int score) {
+        if (score >= 90 && score <=100)
+            grade = 'A';
+        else if (score >= 80 && score <=89)
+            grade = 'B';
+        else grade = 'N';
+        System.out.println("Grade = " + grade);
+    }
+} 
