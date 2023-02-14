@@ -1,0 +1,15 @@
+public class BuildObjectString
+{
+    public static void main(String[] args)
+    {
+        StringBuffer word = new StringBuffer("Sawasdee Thailand");
+        System.out.println(word);
+        word.replace(9,word.length()-1,"CE322: Object Oriented Programming");
+        System.out.println(word);
+        String name = "Bangkok University";
+        String newname = name.substring(0,8) + "Thailand";
+        System.out.println(newname);
+        newname = newname.toUpperCase();
+        System.out.println(newname);
+    }
+} 
