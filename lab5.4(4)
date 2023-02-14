@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import java.io.*;
+public class InputStringToFile{
+    public static void main(String[] args) throws IOException{
+        Scanner kb = new Scanner(System.in);
+        PrintStream out = new PrintStream(new File("sentence.txt"));
+        int i = 1;
+        while(true){
+            System.out.print("Sentence: ");
+            String s = kb.nextLine().toUpperCase();
+            if (s.trim().equalsIgnoreCase("stop"))break;
+            out.println(i + ": " + s);
+            i++;
+        }
+        System.out.println("File is saved");
+        out.close();
+    }
+}
