@@ -1,0 +1,22 @@
+import java.util.*;
+public class InputScan
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please input your name: ");
+        String str = scanner.next();
+        System.out.println("Hello " + str);
+        System.out.println("Please input your birthyear(25XX) : ");
+        String input = scanner.next();
+        try{
+            int newnum;
+            int num = Integer.parseInt(input);
+            newnum = num -543;
+            System.out.println("your birth in year"+num+" in buddhist era and in christ era year"+newnum);
+        }
+        catch (NumberFormatException ee){
+            System.out.println("Incorrect input String format.");
+        }
+    }
+}
