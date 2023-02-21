@@ -1,0 +1,18 @@
+import java.util.*;
+public class ScoreMap
+{
+    public static void main(String[] args)
+    {
+        Map<String, Integer> score = new HashMap<String,Integer>();
+        
+        score.put("Somying", 15);
+        score.put("Steve", 30);
+        score.put("Samart", 15);
+        score.put("Somwang", 20);
+        System.out.println(score);
+        score.put("Samart", 18);
+        System.out.println(score.get("Samart"));
+        System.out.println(score.keySet());
+        System.out.println(score.values());
+    }
+} 
