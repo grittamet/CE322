@@ -1,0 +1,31 @@
+import java.util.*;
+public class DataMap {
+    public static void main(String[] args)
+    {
+        Base d = new Base();
+        d.namecol();
+    }
+}
+
+class Base{
+    
+    Map<String, String> data = new HashMap<String,String>();
+    
+    void namecol(){
+        for (int i = 1; i <= 3; i++){
+            Scanner user = new Scanner(System.in);
+            System.out.print("Name: ");
+            String name = user.next();
+        
+            Scanner colour = new Scanner(System.in);
+            System.out.print("Colour: ");
+            String col = colour.next();
+        
+            data.put(name,col);
+            System.out.println(data);
+            System.out.println(data.keySet());
+            System.out.println(data.values());
+            System.out.println();
+        }
+    }
+}
