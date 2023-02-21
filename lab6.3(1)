@@ -1,0 +1,17 @@
+import java.util.*;
+public class TestCollection
+{
+ public static void main(String[] args)
+ {
+ List<String> lst = new ArrayList<String>();
+ lst.add("Somying");
+ lst.add("Sommai");
+ lst.add("Somwang");
+ lst.add("Somporn");
+
+ Collections.sort(lst);
+ System.out.println(lst);
+ int i = Collections.binarySearch(lst,"Somporn");
+ System.out.println(i);
+ }
+} 
