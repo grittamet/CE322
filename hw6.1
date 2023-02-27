@@ -1,0 +1,29 @@
+import java.io.FileWriter;
+import java.io.IOException;
+public class Write {
+    public static void main(String[] args) throws IOException {
+        try {
+            FileWriter myWriter = new FileWriter("input.txt");
+            myWriter.write("Hello World\n");
+            myWriter.write("I Love U");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+
+import java.util.Scanner;
+import java.io.*;
+public class Read {
+    public static void main(String[] args) throws IOException {
+        Scanner file = new Scanner(new File("D:/input.txt"));
+        int i = 1;
+        while(file.hasNext()){
+            String id =file.nextLine();
+            System.out.println(i++ + "."+ id);
+        }
+    }
+}
