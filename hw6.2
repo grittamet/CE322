@@ -1,0 +1,60 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+public class OUTPUTtxt {
+    public static void main(String[] args) throws IOException {
+        Scanner sc1 = new Scanner(System.in);
+        int i = 1;
+        try {
+            FileWriter myWriter = new FileWriter("output.txt");
+            while(true){
+                System.out.println("Enter Student Code : ");
+                String str = sc1.next();
+                myWriter.write(str + "\n");
+                if(str.trim().equalsIgnoreCase("stop")){
+                    break;
+                }
+                System.out.println(i+":"+str);
+                i++;
+            }
+            myWriter.close();
+            System.out.println("Information entered successfully.");
+        } catch (IOException e) {
+            System.out.println("The entered information is wrong.");
+            e.printStackTrace();
+        }
+    }
+}
+
+import java.util.Scanner;
+import java.io.*;
+public class OUTPUTtxt {
+    public static void main(String[] args) throws IOException {
+        Scanner file = new Scanner(new File("D:/output.txt"));
+        while(file.hasNext()){
+            String id =file.next();
+            String calYear = id.substring(1,3);
+            int caseYear = Integer.parseInt(calYear);
+            int x =0;
+            if(caseYear>=65 || caseYear <=60){
+                System.out.println("You is not Student in University");
+            }else{
+                switch(caseYear){
+                    case 61:
+                        x = 4;
+                        break;
+                        case 62:
+                            x = 3;
+                            break;
+                            case 63:
+                                x = 2;
+                                break;
+                                case 64:
+                                    x = 1;
+                                    break;
+                }
+                System.out.println("Student ID : "+id+" is "+ x+" Year of University");
+            }
+        }
+    }
+}
