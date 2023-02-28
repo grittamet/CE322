@@ -1,0 +1,28 @@
+import java.util.*;
+public class SecondClass {
+    public static void main(String args[]){
+        Grade5 g1 = new Grade5();
+        g1.inputName();
+        g1.inputScore();
+        
+    }
+}
+class Grade5{
+    Scanner scanner = new Scanner(System.in); 
+    void inputName(){ 
+        System.out.print("Input name: ");
+        String name = scanner.next();
+        System.out.println("Name: " + name);
+    }
+    void inputScore(){
+        for (int i = 1; i <= 5; i++){
+            System.out.print("Input score: ");
+            String sc = scanner.next();
+            int score = Integer.parseInt(sc);
+            System.out.println("Score: " + score);
+        }
+    }
+    void findGrade(){
+        
+    }
+}
